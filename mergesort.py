@@ -1,6 +1,7 @@
 def merge_sort(arr):
     if(len(arr)<=1):
         return arr
+    mid=len(arr)//2
     l_flow=arr[:mid]
     r_flow=arr[mid:]
     merge_sort(l_flow)
@@ -9,7 +10,7 @@ def merge_sort(arr):
 def merge(l_flow,r_flow):
     sorty=[]
     i=j=0
-    while i<l_flow and j<r_flow:
+    while i<len(l_flow) and j<len(r_flow):
         if l_flow[i]<r_flow[j]:
             sorty.append(l_flow[i])
             i+=1
